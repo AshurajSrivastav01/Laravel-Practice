@@ -30,6 +30,11 @@
                                    class="form-control" 
                                    placeholder="Enter your full name" 
                                    >
+                            <span class="text-danger">
+                                @error('full_name')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
 
                         <!-- Email -->
@@ -40,6 +45,11 @@
                                    class="form-control" 
                                    placeholder="Enter your email" 
                                    >
+                            <span class="text-danger">
+                                @error('email')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
 
                         <!-- Password -->
@@ -50,6 +60,11 @@
                                    class="form-control" 
                                    placeholder="Enter password" 
                                    >
+                            <span class="text-danger">
+                                @error('password')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
 
                         <!-- Confirm Password -->
@@ -60,6 +75,11 @@
                                    class="form-control" 
                                    placeholder="Confirm password" 
                                    >
+                            <span class="text-danger">
+                                @error('confirm_password')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
 
                         <!-- Gender -->
@@ -71,6 +91,11 @@
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
                             </select>
+                            <span class="text-danger">
+                                @error('gender')
+                                    {{ $message }}
+                                @enderror
+                            </span>                 
                         </div>
 
                         <!-- Terms -->
@@ -83,6 +108,11 @@
                             <label class="form-check-label">
                                 I agree to the terms and conditions
                             </label>
+                            <span class="text-danger">
+                                @error('terms')
+                                    {{ $message }}
+                                @enderror
+                            </span>
                         </div>
 
                         <!-- Submit Button -->
@@ -91,7 +121,6 @@
                                 Register
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>

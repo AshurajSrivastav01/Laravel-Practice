@@ -13,7 +13,7 @@ class RegistrationController extends Controller
 
     public function registor(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
 
         // array:7 [▼ // app/Http/Controllers/RegistrationController.php:16
         //     "_token" => "tw7kIeeJHvWwFMsyL4T6tHuuQmmHZtsqNdOSs43z"
@@ -26,8 +26,14 @@ class RegistrationController extends Controller
         // ]
 
         $request->validate([
-            'full_name' => 'require'
+            'full_name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+            'confirm_password' => 'required|same:password',
+            'gender' => 'required',
+            'terms' => 'required'
         ]);
+
 
     }
 }
