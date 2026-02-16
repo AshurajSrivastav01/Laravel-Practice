@@ -23,97 +23,19 @@
                     <form action="{{ url('/user/registration') }}" method="POST">
                         @csrf
                         <!-- Full Name -->
-                        <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <input type="text" 
-                                   name="full_name"
-                                   class="form-control" 
-                                   placeholder="Enter your full name" 
-                                   >
-                            <span class="text-danger">
-                                @error('full_name')
-                                    {{ $message }}
-                                @enderror
-                            </span>
-                        </div>
+                        <x-input label="Full Name" type="text" name="name" id="name" placeholder="enter your name" />
 
-                        <!-- Email -->
-                        <div class="mb-3">
-                            <label class="form-label">Email Address</label>
-                            <input type="text" 
-                                   name="email"
-                                   class="form-control" 
-                                   placeholder="Enter your email" 
-                                   >
-                            <span class="text-danger">
-                                @error('email')
-                                    {{ $message }}
-                                @enderror
-                            </span>
-                        </div>
+                        <!-- Email Id -->
+                        <x-input label="Email Id" type="email" name="email" id="email" placeholder="abc@gmail.com" />
 
                         <!-- Password -->
-                        <div class="mb-3">
-                            <label class="form-label">Password</label>
-                            <input type="password" 
-                                   name="password"
-                                   class="form-control" 
-                                   placeholder="Enter password" 
-                                   >
-                            <span class="text-danger">
-                                @error('password')
-                                    {{ $message }}
-                                @enderror
-                            </span>
-                        </div>
-
+                        <x-input label="Password" type="password" name="password" id="password" placeholder="******" />
+                        
                         <!-- Confirm Password -->
-                        <div class="mb-3">
-                            <label class="form-label">Confirm Password</label>
-                            <input type="password" 
-                                   name="confirm_password"
-                                   class="form-control" 
-                                   placeholder="Confirm password" 
-                                   >
-                            <span class="text-danger">
-                                @error('confirm_password')
-                                    {{ $message }}
-                                @enderror
-                            </span>
-                        </div>
-
-                        <!-- Gender -->
-                        <div class="mb-3">
-                            <label class="form-label">Gender</label>
-                            <select name="gender" class="form-select" >
-                                <option value="">Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <span class="text-danger">
-                                @error('gender')
-                                    {{ $message }}
-                                @enderror
-                            </span>                 
-                        </div>
+                        <x-input label="Confirm Password" type="password" name="confirm_password" id="confirm_password" placeholder="******" />
 
                         <!-- Terms -->
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" 
-                                   type="checkbox" 
-                                   name="terms" 
-                                   value="1"
-                                   >
-                            <label class="form-check-label">
-                                I agree to the terms and conditions
-                            </label>
-                            <span class="text-danger">
-                                @error('terms')
-                                    {{ $message }}
-                                @enderror
-                            </span>
-                        </div>
+                        <x-input label="Terms" type="checkbox" name="terms" id="terms"/>
 
                         <!-- Submit Button -->
                         <div class="d-grid">
