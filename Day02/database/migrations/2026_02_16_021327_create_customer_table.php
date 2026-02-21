@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->string('email');
             $table->enum('gender', ['M', 'F', 'O'])->default('O');
             $table->date('dob')->nullable();
