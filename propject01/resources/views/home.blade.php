@@ -8,7 +8,11 @@
 </head>
 <body>
     <h1>Home Page</h1>
+    <h1>{{ URL::previous() }}</h1>
+    <h1>{{ URL::current() }}</h1>
+    <h1>{{ URL::full() }}</h1>
     <x-message-banner class="alert alert-success" message="User Login Successfully!"/>
     <x-message-banner class="alert alert-danger" message="Not Authorised!"/>
+
 </body>
 </html>
