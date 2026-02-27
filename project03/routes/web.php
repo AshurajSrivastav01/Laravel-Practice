@@ -10,3 +10,4 @@ Route::get('/', function () {
 
 Route::get('list', [StudentController::class, 'list']);
 Route::get('seller', [SellerController::class, 'sellerList']);
+Route::get('ManyToOne', [SellerController::class, 'ManyToOne']);
