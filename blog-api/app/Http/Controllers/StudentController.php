@@ -8,6 +8,6 @@ use App\Models\Student;
 class StudentController extends Controller
 {
     public function list(){
-        // return Student::all();
+        return 'Student::all()';
     }
 }
